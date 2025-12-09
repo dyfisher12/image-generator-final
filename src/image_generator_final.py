@@ -10,15 +10,15 @@ def main():
     character_A = input("Select your first character: \n1) Link \n2) Death the Kid \n3) Papa Emeritus II \n4) Perry the Platypus \n5) Random")
     character_B = input("Select your second character: \n1) King Bob \n2) Geralt of Rivia \n3) Foxy \n4) Batman \n5) Random")
     character_pet = input("Select a pet for your characters: \n1) Garfield \n2) Navi \n3) Bolt \n4) Dimple \n5) Random")
-    quote_select = input("Would you like to display a randomly generated quote? \nYes/No")
+    quote_select = input("Would you like to display a randomly generated quote? \nY/N")
 
     
     os.chdir("bgrounds")
     if background_img == "5":
-         background_pngs = glob.glob('bground*.png')
-         background_jpgs = glob.glob('bground*.jpg')
-         all_bgrounds = background_pngs + background_jpgs
-         selected_bground = random.choice(all_bgrounds)
+        background_pngs = glob.glob('bground*.png')
+        background_jpgs = glob.glob('bground*.jpg')
+        all_bgrounds = background_pngs + background_jpgs
+        selected_bground = random.choice(all_bgrounds)
     elif background_img == "4":
         selected_bground = "bground04.png"
     elif background_img == "3":
@@ -33,13 +33,13 @@ def main():
         characterA_pngs = glob.glob('characterA*.png')
         selected_charA = random.choice(characterA_pngs)
     elif character_A == "4":
-            selected_charA = "characterA04.png"
+        selected_charA = "characterA04.png"
     elif character_A == "3":
-            selected_charA = "characterA03.jpg"
+        selected_charA = "characterA03.jpg"
     elif character_A == "2":
-            selected_charA = "characterA02.jpg"
+        selected_charA = "characterA02.jpg"
     elif character_A == "1":
-            selected_charA = "characterA01.png"
+        selected_charA = "characterA01.png"
         
     os.chdir("characterB")
     if character_B == "5":
@@ -67,5 +67,12 @@ def main():
     elif character_pet == "1":
         selected_pet = "pet01.png"
         
-    
-    
+    if quote_select == "Y":
+        with open("quotes_list.txt", 'r') as file:
+            quotes = file.readlines()
+            rand_quote = random.choice(quotes)
+
+
+
+if __name__ == "__main__":
+    main()
