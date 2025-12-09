@@ -74,6 +74,18 @@ def main():
         with open("quotes_list.txt", 'r') as file:
             quotes = file.readlines()
             rand_quote = random.choice(quotes)
+    
+    with (Image.open(selected_bground) as img,
+          Image.open(selected_charA) as charA,
+          Image.open(selected_charB) as charB,
+          Image.open(selected_pet) as pet):
+          
+        img.paste(selected_charA, (10, (img.height - charA.height)), mask=selected_charA.getchannel('A'))
+        img.paste(selected_charB, ((img.width - 10), (img.height - charB.height)), mask=selected_charB.getchannel('A'))
+        img.paste(selected_pet, (75, (img.height - pet.height)), mask=selected_pet.getchannel('A'))
+
+        img.show()
+    
 
 
 
