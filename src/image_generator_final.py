@@ -18,6 +18,8 @@ def main():
             background_jpgs = glob.glob('bground*.jpg')
             all_bgrounds = background_pngs + background_jpgs
             selected_img = random.choice(all_bgrounds)
+        elif background_img == "4":
+            selected_img = bground
 
 
         
