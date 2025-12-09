@@ -1,6 +1,7 @@
 from PIL import Image, ImageFile
 import random
 import glob
+import os
 
 def main():
 
@@ -13,6 +14,11 @@ def main():
 
     def create_image():
         if background_img == "5":
+            background_pngs = glob.glob('bground*.png')
+            background_jpgs = glob.glob('bground*.jpg')
+            all_bgrounds = background_pngs + background_jpgs
+            selected_img = random.choice(all_bgrounds)
+
 
         
     
