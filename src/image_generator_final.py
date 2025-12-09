@@ -6,11 +6,11 @@ import os
 def main():
 
     
-    background_img = input("Select your background: \n1) Death City \n2) Hyrule Field \n3) The Moon \n4) Minecraft Cave \n5) Random")
-    character_A = input("Select your first character: \n1) Link \n2) Death the Kid \n3) Papa Emeritus II \n4) Perry the Platypus \n5) Random")
-    character_B = input("Select your second character: \n1) King Bob \n2) Geralt of Rivia \n3) Foxy \n4) Batman \n5) Random")
-    character_pet = input("Select a pet for your characters: \n1) Garfield \n2) Navi \n3) Bolt \n4) Dimple \n5) Random")
-    quote_select = input("Would you like to display a randomly generated quote? \nY/N")
+    background_img = input("Select your background: \n1) Death City \n2) Hyrule Field \n3) The Moon \n4) Minecraft Cave \n5) Random\n")
+    character_A = input("Select your first character: \n1) Link \n2) Death the Kid \n3) Papa Emeritus II \n4) Perry the Platypus \n5) Random\n")
+    character_B = input("Select your second character: \n1) King Bob \n2) Geralt of Rivia \n3) Foxy \n4) Batman \n5) Random\n")
+    character_pet = input("Select a pet for your characters: \n1) Garfield \n2) Navi \n3) Bolt \n4) Dimple \n5) Random\n")
+    quote_select = input("Would you like to display a randomly generated quote? \nY/N\n")
 
     
     os.chdir("bgrounds")
@@ -28,7 +28,7 @@ def main():
     elif background_img == "1":
         selected_bground = "bground01.png"
     
-    print(os.getcwd())
+    
     os.chdir("characterA")
     if character_A == "5":
         characterA_pngs = glob.glob('characterA*.png')
