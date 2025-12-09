@@ -13,15 +13,36 @@ def main():
     quote_select = input("Would you like to display a randomly generated quote? \nYes/No")
 
     def create_image():
+        os.chdir("bgrounds")
         if background_img == "5":
             background_pngs = glob.glob('bground*.png')
             background_jpgs = glob.glob('bground*.jpg')
             all_bgrounds = background_pngs + background_jpgs
-            selected_img = random.choice(all_bgrounds)
+            selected_bground = random.choice(all_bgrounds)
         elif background_img == "4":
-            selected_img = bground
+            selected_bground = "bground04.png"
+        elif background_img == "3":
+            selected_bground = "bground03.jpg"
+        elif background_img == "2":
+            selected_bground = "bground02.jpg"
+        elif background_img == "1":
+            selected_bground = "bground01.png"
+        
+        os.chdir("characterA")
+        if character_A == "5":
+            characterA_pngs = glob.glob('characterA*.png')
+            selected_charA = random.choice(characterA_pngs)
+        elif character_A == "4":
+            selected_charA = "characterA04.png"
+        elif character_A == "3":
+            selected_charA = "characterA03.jpg"
+        elif character_A == "2":
+            selected_charA = "characterA02.jpg"
+        elif character_A == "1":
+            selected_charA = "characterA01.png"
+
 
 
         
     
-    create_image()
+    
