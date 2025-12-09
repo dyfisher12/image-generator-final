@@ -1,18 +1,19 @@
 from PIL import Image, ImageFile
 import random
+import glob
 
 def main():
 
     
-    background_img = input("Select your background: \nA) Death City \nB) Hyrule Field \nC) The Moon \nD) Minecraft Cave \nE) Random")
-    character_A = input("Select your first character: \nA) Link \nB) Death the Kid \nC) Papa Emeritus II \nD) Perry the Platypus \nE) Random")
-    character_B = input("Select your second character: \nA) King Bob \nB) Geralt of Rivia \nC) Foxy \nD) Batman \nE) Random")
-    character_pet = input("Select a pet for your characters: \nA) Garfield \nB) Navi \nC) Bolt \nD) Dimple \nE) Random")
+    background_img = input("Select your background: \n1) Death City \n2) Hyrule Field \n3) The Moon \n4) Minecraft Cave \n5) Random")
+    character_A = input("Select your first character: \n1) Link \n2) Death the Kid \n3) Papa Emeritus II \n4) Perry the Platypus \n5) Random")
+    character_B = input("Select your second character: \n1) King Bob \n2) Geralt of Rivia \n3) Foxy \n4) Batman \n5) Random")
+    character_pet = input("Select a pet for your characters: \n1) Garfield \n2) Navi \n3) Bolt \n4) Dimple \n5) Random")
     quote_select = input("Would you like to display a randomly generated quote? \nYes/No")
 
     def create_image():
-        if background_img == "e":
-            
+        if background_img == "5":
+
         
     
     create_image()
