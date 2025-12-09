@@ -12,7 +12,7 @@ def main():
     character_pet = input("Select a pet for your characters: \n1) Garfield \n2) Navi \n3) Bolt \n4) Dimple \n5) Random")
     quote_select = input("Would you like to display a randomly generated quote? \nY/N")
 
-    
+    originaldir = os.getcwd
     os.chdir("bgrounds")
     if background_img == "5":
         background_pngs = glob.glob('bground*.png')
@@ -28,7 +28,7 @@ def main():
     elif background_img == "1":
         selected_bground = "bground01.png"
     
-    os.chdir("image_generator_final")
+    os.chdir(originaldir)
     os.chdir("characterA")
     if character_A == "5":
         characterA_pngs = glob.glob('characterA*.png')
@@ -42,7 +42,7 @@ def main():
     elif character_A == "1":
         selected_charA = "characterA01.png"
 
-    os.chdir("image_generator_final")    
+    os.chdir(originaldir)    
     os.chdir("characterB")
     if character_B == "5":
         characterB_pngs = glob.glob('characterB*.png')
@@ -56,7 +56,7 @@ def main():
     elif character_B == "1":
         selected_charB = "characterB01.png"
 
-    os.chdir("image_generator_final")
+    os.chdir(originaldir)
     os.chdir("pet")
     if character_pet == "5":
         pet_pngs = glob.glob('pet*.png')
