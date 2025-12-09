@@ -40,7 +40,19 @@ def main():
             selected_charA = "characterA02.jpg"
         elif character_A == "1":
             selected_charA = "characterA01.png"
-
+        
+        os.chdir("characterB")
+        if character_B == "5":
+            characterB_pngs = glob.glob('characterB*.png')
+            selected_charB = random.choice(characterB_pngs)
+        elif character_B == "4":
+            selected_charB = "characterB04.png"
+        elif character_B == "3":
+            selected_charB = "characterB03.jpg"
+        elif character_B == "2":
+            selected_charB = "characterB02.jpg"
+        elif character_B == "1":
+            selected_charB = "characterB01.png"
 
 
         
